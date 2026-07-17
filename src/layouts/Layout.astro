@@ -60,9 +60,14 @@ import Header from '../components/Header.astro';
 </style>
 
 <script>
+	const MIN_TIME = 500;
+	const start = performance.now();
+
 	window.addEventListener("load", () => {
-    document
-        .getElementById("loader")
-        .classList.add("hide");
+		const elapsed = performance.now() - start;
+
+		setTimeout(() => {
+			loader.classList.add("hide");
+		}, Math.max(0, MIN_TIME - elapsed));
 	});
 </script>
