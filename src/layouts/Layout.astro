@@ -1,19 +1,56 @@
+---
+const { title = "Tengiz" } = Astro.props;
+const { background = "src/assets/background.jpg" } = Astro.props;
+import Header from '../components/Header.astro';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/TengizLogo3.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body style={`background-image:url(${background}); background-size: cover`}>
+		<div id="loader"><p style={`z-index: 9999;`}>Loading...</p></div>
+		<Header />
 		<slot />
 	</body>
 </html>
 
 <style>
+	#loader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		inset: 0;
+		background: black;
+		z-index: 9998;
+		opacity: 1;
+		transition: opacity 1s ease;
+	}
+
+	#loader p {
+		color: white;
+		font-size: 1.2rem;
+		font-family: HelveticaNowText;
+	}
+
+	#loader.hide {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	@font-face {
+        font-family: HelveticaNowText;
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/fonts/63cfc284c204bd1597bc68464e18042b.woff) format("woff");
+    }
 	html,
 	body {
 		margin: 0;
@@ -21,3 +58,11 @@
 		height: 100%;
 	}
 </style>
+
+<script>
+	window.addEventListener("load", () => {
+    document
+        .getElementById("loader")
+        .classList.add("hide");
+	});
+</script>
