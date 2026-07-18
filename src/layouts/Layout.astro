@@ -17,6 +17,7 @@ import Analytics from '@vercel/analytics/astro'
 	</head>
 	<body style={`background-image:url(${background.src}); background-size: cover`}>
 		<div id="loader"><p style={`z-index: 9999;`}>Loading...</p></div>
+		
 		<Analytics />
 		<Header />
 		<slot />
@@ -64,12 +65,13 @@ import Analytics from '@vercel/analytics/astro'
 <script>
 	const MIN_TIME = 500;
 	const start = performance.now();
+	const loader = document.getElementById("loader");
 
 	window.addEventListener("load", () => {
 		const elapsed = performance.now() - start;
 
 		setTimeout(() => {
-			loader.classList.add("hide");
+			loader?.classList.add("hide");
 		}, Math.max(0, MIN_TIME - elapsed));
 	});
 </script>
