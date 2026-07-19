@@ -52,6 +52,8 @@ body {
     background-color: #343450;
     border-bottom: 20px;
     margin-left:44%;
+    color :rgb(0, 255, 55);
+    border-color:aqua;
     /* padding-top: 2%; */
 }
 
@@ -59,17 +61,22 @@ body {
       background-color: #343450;
       margin-left:44%;
       margin-bottom:1px;
+      color :rgb(0, 255, 55);
 }
 
 #pass-box-2 {
       background-color: #343450;
       margin-left:44%;
       margin-top:1px;
+      color :rgb(0, 255, 55);
 }
 
 #but-1 {
     margin-bottom: 5%;
+    background-color: #585886;;
 }
+
+
 
 /* @keyframes animBG {
     0% {transform:translateY(200px);}

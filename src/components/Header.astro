@@ -41,12 +41,12 @@
     <div class="right">
         <nav>
             <ul class="nav-list">
-                <li><button class="nav-btn" id="accounts-nav-btn">Accounts</button></li>
+                <li ><button class="nav-btn" id="accounts-nav-btn">  Accounts  </button></li>
             </ul>
 
             <div class="dropdown">
                 <ul class="dropdown-menu" id="accounts-dropdown-menu">
-                    <li><a href="setupacc">Setup Account</a></li>
+                    <li id = "nav-acc-but"><a href="setupacc">Setup Account</a></li>
                 </ul>  
             </div>
         </nav>
@@ -58,7 +58,7 @@
 
 <style>
     body {
-        background-color: #212129;
+        background-color: #1b1b1f;
     }
     .s0 {
         fill: #ffffff;
@@ -142,7 +142,8 @@
     }
 
     .dropdown-menu {
-        background-color: #ffffff;
+        background-color: #3b388f;
+        border:5px, outset, rgb(41, 46, 73);
         padding: 0;
         position: fixed;
         z-index: 9997;
@@ -160,6 +161,13 @@
 
     #accounts-dropdown-menu.dropdown-menu.open {
         transform: scaleY(1);
+    }
+
+    #nav-acc-but {
+        color : red;
+        font-size: 20px;
+        padding-left: 66px;
+        padding-top: 40px;
     }
 
 </style>
