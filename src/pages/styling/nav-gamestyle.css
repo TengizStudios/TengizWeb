@@ -1,0 +1,41 @@
+   .dropdown-games {
+        background-color: #3b388f;
+        border:5px, outset, rgb(41, 46, 73);
+        padding: 0;
+        position: fixed;
+        z-index: 9997;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform .25s hold; 
+    }
+
+    .dropdown-games a {
+        color: black;
+    }
+
+
+    #dropdown-games-menu.dropdown-games {
+        top: 70px;
+        left: 80vw;
+        width: 30vw;
+        height: 200px;
+    }
+
+    #dropdown-games-menu.dropdown-games.open {
+        transform: scaleY(10);
+    }
+
+
+    #games-nav-but {
+        background-image: url("/src/assets/aero_test0.png");
+        background-position: 0px;
+        background-size: 76px;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+        /* font-family: Calibri; */
+        color : white;
+        font-style: normal;
+        font-size: 16px;
+        /* padding-left: 10px;
+        padding-top: 5px; */
+    }

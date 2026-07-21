@@ -1,0 +1,57 @@
+    .dropdown-menu {
+        background-image: url("/src/assets/aero_popup.png");
+        background-position-x: 88px;
+        /* background-position-y: 88px; */
+        background-size: 300px;
+        background-attachment: fixed;
+
+        background-blend-mode: hue;
+        background-repeat: no-repeat;
+        /* background-color: #3b388f;
+        border:5px, outset, rgb(41, 46, 73); */
+        padding: 0;
+        position: fixed;
+        
+        z-index: 9997;
+        transform-origin: top;
+        transform: scaleY(0);
+        transition: transform .25s hold; 
+
+    }
+
+    .dropdown-menu a {
+        color: black;
+    }
+
+    #accounts-dropdown-menu.dropdown-menu {
+        top: 70px;
+        left: 80vw;
+        width: 30vw;
+        height: 200px;
+    }
+
+    #accounts-dropdown-menu.dropdown-menu.open {
+        transform: scaleY(1);
+    }
+
+    #nav-acc-but {
+        /* background-image: url("/src/assets/aero_test0.png");
+        background-position: 0px;
+        background-size: 92px; */
+        background-repeat: no-repeat;
+        color : red;
+        font-size: 20px;
+        padding-left: 145px;
+        padding-top: 40px;
+    }
+
+    #nav-games-but-1 {
+        /* background-image: url("/src/assets/aero_test0.png");
+        background-position: 0px;
+        background-size: 92px; */
+        background-repeat: no-repeat;
+        color : red;
+        font-size: 20px;
+        padding-left: 155px;
+        padding-top: 21px;
+    }

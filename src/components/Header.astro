@@ -1,3 +1,8 @@
+---
+import '../pages/styling/nav-accstyle.css'
+import '../pages/styling/nav-gamestyle.css'
+---
+
 <!DOCTYPE html>
 
 <head>
@@ -27,9 +32,21 @@
             <a href="/games">ABOUT US</a> -->
 
             <ul class="nav-list">
-                <li><button class="nav-btn" id="games-nav-btn">Games</button></li>
+                <nav>
+                    <li><button class="nav-btn" id = "games-nav-but"> Games </button></li>
+                
+                    <div class="dropdown-games">
+                            <ul class="games-dropdown-menu" id="dropdown-games-menu">
+                            <li id = "nav-games-but"><a href="https://github.com/TengizStudios/ProjectSofia_old"> Project Sofia</a></li>
+                           </ul>  
+                    </div>
+                </nav>
+          
+
                 <li><button class="nav-btn" id="softwares-nav-btn">Softwares</button></li>
+
                 <li><button class="nav-btn" id="store-nav-btn">Store</button></li>
+
                 <li><button class="nav-btn" id="about-nav-btn">About us</button></li>
             </ul>
 
@@ -38,23 +55,51 @@
             <a href="/games">ABOUT US</a> -->
         </nav>
     </div>
+
+
+
     <div class="right">
         <nav>
             <ul class="nav-list">
-                <li ><button class="nav-btn" id="accounts-nav-btn">  Accounts  </button></li>
+                <li ><button class="nav-btn" id="accounts-nav-but">  Accounts  </button></li>
             </ul>
 
-            <div class="dropdown">
+            <div class="dropdown-acc">
                 <ul class="dropdown-menu" id="accounts-dropdown-menu">
                     <li id = "nav-acc-but"><a href="setupacc">Setup Account</a></li>
+                     <li id = "nav-games-but-1"><a href="https://github.com/TengizStudios/ProjectSofia_old"> Project Sofia </a></li>
                 </ul>  
             </div>
+
         </nav>
     </div>
 </header>
 
 
 <script src="https://kit.fontawesome.com/18258fa4ec.js" crossorigin="anonymous"></script>
+
+
+<script>
+    const accountsNavBtn = document.getElementById("accounts-nav-but");
+    const accountsNavMenu = document.getElementById("accounts-dropdown-menu");
+
+    const gamesNavBtn = document.getElementById("games-nav-but");
+    const gamesNavMenu = document.getElementById("dropdown-games-menu");
+
+    const header = document.getElementById("header");
+
+    accountsNavBtn?.addEventListener("click", () => {
+        accountsNavMenu?.classList.toggle("open");
+        // header?.classList.toggle("nav-open");
+         }
+    );
+
+    gamesNavBtn?.addEventListener("click", () => {
+        gamesNavMenu?.classList.toggle("open");
+         }
+    );
+
+</script>
 
 <style>
     body {
@@ -67,7 +112,6 @@
         width: 70px;
         height: auto;
     }
-
     header {
         /* background-color: #111111 ; */
         position: fixed;
@@ -82,44 +126,36 @@
         align-items: center;
         z-index: 9995;
         width: calc(100vw - 40px);
-
         transition: background-color .3s ease;
     }
-
     header.nav-open {
         background: black;
     }
-
     p {
+        
         color: white;
     }
-
     nav a {
+        
         color: white;
         text-decoration: none;
         padding: 10px 20px;
     }
-
-
-
-    .dropdown-menu a {
-        color: black;
-    }
-
     .nav-btn {
+  
         font-size: 16px;
         background: none;
         border: none;
         font-family: HelveticaNowText;
-        font-weight: bold;
+        /*font-weight: bold;*/
         color: white;
         cursor: pointer;
         padding: 5px 10px;
-        /** border-radius: 10px; **/
-
         transition: .30s ease;
     }
-
+    .dropdown-menu a {
+        color: black;
+    }
     .nav-btn:hover {
         background-color: rgba(240, 240, 240, .5);
     }
@@ -141,7 +177,7 @@
         gap: 20px;
     }
 
-    .dropdown-menu {
+    /* .dropdown-menu {
         background-color: #3b388f;
         border:5px, outset, rgb(41, 46, 73);
         padding: 0;
@@ -150,38 +186,54 @@
         transform-origin: top;
         transform: scaleY(0);
         transition: transform .25s hold; 
+    } */
+    /* .dropdown-games a {
+        color: black;
     }
-
-    #accounts-dropdown-menu.dropdown-menu {
+    .dropdown-games {
+        background-color: #3b388f;
+        border:5px, outset, rgb(41, 46, 73);
+        padding: 0;
+        position: fixed;
+        z-index: 9996;
+        margin-right: 150%;
+        transform-origin: top;
+        transform: scale(0);
+        transition: transform .25s hold; 
+    }
+    #games-dropdown-menu.dropdown-games {
+        top: 70px;
+        left: 800vw;
+        width: 30vw;
+        height: 200px;
+    }
+    #games-dropdown-menu.dropdown-games.open {
+        transform: scaleY(1);
+    }
+    #games-nav-but {
+        color : red;
+        font-size: 20px;
+        padding-left: 66px;
+        padding-top: 40px;
+    } */
+    /* #accounts-dropdown-menu.dropdown-menu {
         top: 70px;
         left: 80vw;
         width: 30vw;
         height: 200px;
     }
-
     #accounts-dropdown-menu.dropdown-menu.open {
         transform: scaleY(1);
     }
-
     #nav-acc-but {
         color : red;
         font-size: 20px;
         padding-left: 66px;
         padding-top: 40px;
-    }
+    } */
 
 </style>
 
-<script>
-    const accountsNavBtn = document.getElementById("accounts-nav-btn");
-    const accountsNavMenu = document.getElementById("accounts-dropdown-menu");
-    const header = document.getElementById("header");
 
-    accountsNavBtn?.addEventListener("click", () => {
-        accountsNavMenu?.classList.toggle("open");
-        // header?.classList.toggle("nav-open");
-    })
-
-</script>
 
 <!-- #070707 #0D0D0D #151515 #202020 -->
