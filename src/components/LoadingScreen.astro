@@ -1,4 +1,32 @@
 <div id="loader"><p style={`z-index: 9999;`}>Loading...</p></div>
+<style>
+	#loader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		inset: 0;
+		background: black;
+		z-index: 9998;
+		opacity: 1;
+		transition: opacity 1s ease;
+
+		
+	}
+
+	#loader p {
+		color: white;
+		font-size: 1.2rem;
+		font-family: "Nunito", sans-serif;
+		font-optical-sizing: auto;
+		font-style: normal;
+	}
+
+	#loader.hide {
+		opacity: 0;
+		pointer-events: none;
+	}
+</style>
 <script>
 	const MIN_TIME = 500;
 	const start = performance.now();
