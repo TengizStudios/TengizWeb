@@ -6,7 +6,6 @@ import Analytics from '@vercel/analytics/astro';
 import Sidebar from '../components/Sidebar.astro';
 import SpeedInsights from "@vercel/speed-insights/astro"
 
-const {showLoading = true} = Astro.props;
 ---
 
 <!doctype html>
@@ -24,7 +23,7 @@ const {showLoading = true} = Astro.props;
 	</head>
 	<!-- <body style={`background-image:url(${background.src}); background-size: cover`}> -->
 	<body>
-		{showLoading && <div id="loader"><p style={`z-index: 9999;`}>Loading...</p></div>}
+
 		
 		<Analytics />
 		<SpeedInsights/>
@@ -85,16 +84,4 @@ const {showLoading = true} = Astro.props;
 	
 </style>
 
-<script>
-	const MIN_TIME = 500;
-	const start = performance.now();
-	const loader = document.getElementById("loader");
 
-	window.addEventListener("load", () => {
-		const elapsed = performance.now() - start;
-
-		setTimeout(() => {
-			loader?.classList.add("hide");
-		}, Math.max(0, MIN_TIME - elapsed));
-	});
-</script>
