@@ -1,6 +1,4 @@
     .dropdown-menu {
-        background-image: url("/src/assets/aero_popup.png");
-        background-position-x: 88px;
         /* background-position-y: 88px; */
         background-size: 300px;
         background-attachment: fixed;
@@ -9,13 +7,12 @@
         background-repeat: no-repeat;
         /* background-color: #3b388f;
         border:5px, outset, rgb(41, 46, 73); */
-        padding: 0;
         position: fixed;
-        
+            
         z-index: 9997;
         transform-origin: top;
         transform: scaleY(0);
-        transition: transform .25s hold; 
+        transition: transform .25s ease; 
 
     }
 
@@ -25,9 +22,9 @@
 
     #accounts-dropdown-menu.dropdown-menu {
         top: 70px;
-        left: 80vw;
-        width: 30vw;
+        right: 0;
         height: 200px;
+        margin-left: auto; 
     }
 
     #accounts-dropdown-menu.dropdown-menu.open {
@@ -41,8 +38,8 @@
         background-repeat: no-repeat;
         color : red;
         font-size: 20px;
-        padding-left: 145px;
-        padding-top: 40px;
+        /* padding-left: 145px;
+        padding-top: 40px; */
     }
 
     #nav-games-but-1 {
@@ -52,6 +49,6 @@
         background-repeat: no-repeat;
         color : red;
         font-size: 20px;
-        padding-left: 155px;
-        padding-top: 21px;
+        /* padding-left: 155px;
+        padding-top: 21px; */
     }
