@@ -1,20 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const {toggleLayout = true} = Astro.props;
+import "7.css/dist/7.scoped.css";
 ---
 
 {toggleLayout && <Layout />}
 
 <div id="register-page">
-    <div class="form">
-        <h1>Register Account</h1>
-        <input />
-        <input />
-        <input />
-        <input />
-        <a class="button-links-inactive flex-center">Register!</a>
+    <div class="win7">
+    
+    <div class="window active" style="max-width: 900px">
+    <div class="title-bar">
+        <div class="title-bar-text">Register account</div>
+        <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize" disabled></button>
+        <button aria-label="Close"></button>
+        </div>
     </div>
+    <div class="window-body has-space">
+        
+        <h1>Register Account</h1>
+        <div class="group" style="width: 300px">
+        <label for="text30">Username</label>
+        <input id="text30" type="text" />
+        </div>
+        <div class="group" style="width: 300px">
+        <label for="text31">Email address (Optional)</label>
+        <input id="text31" type="text" />
+        </div>
+        <div class="group" style="width: 300px">
+        <label for="text31">Password</label>
+        <input id="text31" type="text" />
+        </div>
+        <br />
+        <section style="display: flex; justify-content: flex-end; gap: 6px">
+            <button>Register!</button>
+        </section>
+    </div>
+    </div>
+    </div>
+
 </div>
+
 
 <style>
     #register-page {
