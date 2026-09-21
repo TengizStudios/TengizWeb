@@ -22,18 +22,41 @@ import "7.css/dist/7.scoped.css";
         
         <h1>Register Account</h1>
         <div class="group" style="width: 300px">
-        <label for="text30">Username</label>
-        <input id="text30" type="text" />
+        <label for="username">Username</label>
+        <input id="username" type="text" />
+
         </div>
         <div class="group" style="width: 300px">
-        <label for="text31">Email address (Optional)</label>
-        <input id="text31" type="text" />
+        <label for="email">Email address (Optional)</label>
+        <input id="email" type="text" />
+        </div>
+
+        <div class="group" style="width: 300px">
+        <label for="password">Password</label>
+        <input id="password" 
+        type="password"     
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="new-password"
+        style="ime-mode: disabled;"
+        lang="en"
+        />
         </div>
         <div class="group" style="width: 300px">
-        <label for="text31">Password</label>
-        <input id="text31" type="text" />
+
+        <label for="cpass">Comfirm password</label>
+        <input id="cpass" 
+        type="password"     
+        spellcheck="false"
+        autocapitalize="off"
+        autocomplete="new-password"
+        style="ime-mode: disabled;"
+        lang="en"
+        />
         </div>
+
         <br />
+
         <section style="display: flex; justify-content: flex-end; gap: 6px">
             <button>Register!</button>
         </section>
