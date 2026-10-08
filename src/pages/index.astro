@@ -18,7 +18,8 @@ import Layout from '../layouts/Layout.astro';
 		const image2 = document.querySelector<HTMLImageElement>('#hero-image2');
 
         if (image1 && image2) {
-            image1.src = `hero1.webp`;
+            // image1.src = `hero1.webp`;
+			image1.src = `https://picsum.photos/seed/hero1/${width}/${height}`;
             image2.src = `https://picsum.photos/seed/hero2/${width}/${height}`;
         }
     };
